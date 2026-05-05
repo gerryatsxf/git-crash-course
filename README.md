@@ -86,7 +86,7 @@ git log
 > 💡 **The core workflow:** always check status before and after staging, then commit. You'll use this loop constantly.
 
 ```mermaid
-flowchart LR
+flowchart TD
     A([🖊️ Update codebase]) --> B[git status]
     B --> C[git add .]
     C --> D[git status]
