@@ -132,14 +132,16 @@ git log
 
 ```mermaid
 flowchart TD
-    A([Initial commit]) --> B[master branch]
-    B --> B1[Bitcoin app v1]
-    B1 --> B2[Bitcoin app v2]
-    B --> C[solana branch]
-    C --> C1[Solana app v1]
-    C1 --> C2[Solana app v2]
+    A([git init]) --> B[master]
+    B -->|git commit| B1[Bitcoin app v1]
+    B1 -->|git commit| B2[Bitcoin app v2]
+    B -->|git branch solana\ngit checkout solana| C[solana]
+    C -->|git commit| C1[Solana app v1]
+    C1 -->|git commit| C2[Solana app v2]
+    B2 -.->|git checkout master| back([you are here])
     style B fill:#4a90d9,color:#fff
     style C fill:#9b59b6,color:#fff
+    style back fill:#27ae60,color:#fff
 ```
 
 Create and switch to a new branch called `solana`:
