@@ -186,12 +186,64 @@ flowchart TD
 
 > 💡 **Concept:** `git checkout` lets you jump between branches. Your files will literally change to match the branch you switch to.
 
+```mermaid
+flowchart TD
+    A([git init]) --> B[master]
+    B -->|git commit| B1[Bitcoin app v1]
+    B1 -->|git commit| B2[Bitcoin app v2]
+    B -->|git branch solana\ngit checkout solana| C[solana]
+    C -->|git commit| C1[Solana app v1]
+    C1 -->|git commit| C2[Solana app v2]
+    style B fill:#4a90d9,color:#fff
+    style C fill:#9b59b6,color:#fff
+```
+
 ```bash
 git checkout master
 uvicorn app:app
 ```
 
+After switching back, this is where you are:
+
+```mermaid
+flowchart TD
+    A([git init]) --> B[master]
+    B -->|git commit| B1[Bitcoin app v1]
+    B1 -->|git commit| B2([you are here])
+    B -->|git branch solana\ngit checkout solana| C[solana]
+    C -->|git commit| C1[Solana app v1]
+    C1 -->|git commit| C2[Solana app v2]
+    B2 -.->|git checkout master| B2
+    style B fill:#4a90d9,color:#fff
+    style C fill:#9b59b6,color:#fff
+    style B2 fill:#27ae60,color:#fff
+```
+
 You're back to the Bitcoin version. The Solana code is safely stored in the `solana` branch.
+
+> 🚀 **Going further:** Imagine doing this for every cryptocurrency — each gets its own branch, all living in parallel, all shareable with your team.
+
+```mermaid
+flowchart TD
+    A([git init]) --> M[master\nBase app]
+    M -->|git branch bitcoin\ngit checkout bitcoin| B[bitcoin]
+    M -->|git branch solana\ngit checkout solana| S[solana]
+    M -->|git branch ethereum\ngit checkout ethereum| E[ethereum]
+    M -->|git branch dogecoin\ngit checkout dogecoin| D[dogecoin]
+    M -->|git branch xrp\ngit checkout xrp| X[xrp]
+    B -->|commits| B1[Bitcoin chart v1]
+    B1 --> B2[Bitcoin chart v2]
+    S -->|commits| S1[Solana chart v1]
+    E -->|commits| E1[Ethereum chart v1]
+    D -->|commits| D1[Doge chart v1]
+    X -->|commits| X1[XRP chart v1]
+    style M fill:#2c3e50,color:#fff
+    style B fill:#f39c12,color:#fff
+    style S fill:#9b59b6,color:#fff
+    style E fill:#3498db,color:#fff
+    style D fill:#e67e22,color:#fff
+    style X fill:#1abc9c,color:#fff
+```
 
 ---
 
