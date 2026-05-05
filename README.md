@@ -165,6 +165,21 @@ git add .
 git commit -m "Added Solana chart"
 ```
 
+After committing, this is where you are:
+
+```mermaid
+flowchart TD
+    A([git init]) --> B[master]
+    B -->|git commit| B1[Bitcoin app v1]
+    B1 -->|git commit| B2[Bitcoin app v2]
+    B -->|git branch solana\ngit checkout solana| C[solana]
+    C -->|git commit| C1[Solana app v1]
+    C1 -->|git commit| C2([you are here])
+    style B fill:#4a90d9,color:#fff
+    style C fill:#9b59b6,color:#fff
+    style C2 fill:#27ae60,color:#fff
+```
+
 ---
 
 ## 8. ↩️ Switch Back to Master `~2 min`
