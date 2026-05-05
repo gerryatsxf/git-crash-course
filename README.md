@@ -130,6 +130,18 @@ git log
 
 > 💡 **Concept:** A **branch** is a parallel version of your project. You can experiment on a branch without touching the original code.
 
+```mermaid
+flowchart TD
+    A([Initial commit]) --> B[master branch]
+    B --> B1[Bitcoin app v1]
+    B1 --> B2[Bitcoin app v2]
+    B --> C[solana branch]
+    C --> C1[Solana app v1]
+    C1 --> C2[Solana app v2]
+    style B fill:#4a90d9,color:#fff
+    style C fill:#9b59b6,color:#fff
+```
+
 Create and switch to a new branch called `solana`:
 ```bash
 git branch solana
