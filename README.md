@@ -255,15 +255,21 @@ In a lab, your most valuable asset is not your equipment: it's your notes. A pro
 
 **With Git, your lab log becomes a living, versioned document:**
 
-- Every `git commit` is a timestamped entry: *what changed, when, and why* (via the commit message).
-- `git log` gives you a complete, tamper-evident audit trail of your own work.
-- Branches let you explore a new methodology without overwriting your baseline protocol.
-- If an experiment goes wrong, `git checkout` takes you back to any previous state instantly.
-- You can maintain separate branches for different experiments, all on your own machine.
+- Every `git commit` is a timestamped entry: *what changed, when, and why* (via the commit message). ✅ *covered in this course*
+- `git log` gives you a complete, tamper-evident audit trail of your own work. ✅ *covered in this course*
+- Branches let you explore a new methodology without overwriting your baseline protocol. ✅ *covered in this course*
+- You can maintain separate branches for different experiments, all on your own machine. ✅ *covered in this course*
+- Reverting to a previous state, comparing versions, or recovering deleted work — these are possible with more advanced commands not covered here. 📚 *see below*
 
-Think of it as a **lab notebook that never loses a page**, always knows what version you're on, and lets you rewind to any point in your research history.
+The workflow you just learned (`status → add → commit`) is all you need to start. When you're ready to go deeper:
 
-The workflow you just learned (`status → add → commit`) is all you need to start.
+| What you want to do | Command to learn | Docs |
+|---|---|---|
+| Go back to a previous commit | `git checkout <commit-hash>` | [Git docs](https://git-scm.com/docs/git-checkout) |
+| See what changed between versions | `git diff` | [Git docs](https://git-scm.com/docs/git-diff) |
+| Undo the last commit | `git revert` / `git reset` | [Git docs](https://git-scm.com/docs/git-revert) |
+| Save work temporarily without committing | `git stash` | [Git docs](https://git-scm.com/docs/git-stash) |
+| Upload your repo online (GitHub) | `git remote` + `git push` | [GitHub docs](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository) |
 
 ---
 
