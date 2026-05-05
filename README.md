@@ -284,3 +284,21 @@ The workflow you just learned (`status → add → commit`) is all you need to s
 | `git log` | View commit history |
 | `git branch <name>` | Create a new branch |
 | `git checkout <name>` | Switch to a branch |
+
+---
+
+## 🎉 Show Off Your App!
+
+You built a working crypto chart app and learned the core Git workflow — that's worth sharing.
+
+**Post a screenshot and the URL of your running app to our shared board:**
+
+### 👉 [Open the Showcase Board](https://padlet.com/blocomanager/gerry-s-git-crash-course-fl2s21ercsrmh0bl)
+
+To post:
+1. Open the board above
+2. Click the **+** button
+3. Add a screenshot of your app and paste the URL from your Codeanywhere preview
+4. Optionally add your name and which coin you charted
+
+Check out what everyone else built too! 🚀
