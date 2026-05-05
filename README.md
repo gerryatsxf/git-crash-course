@@ -1,7 +1,7 @@
 # 🧑‍💻 Git Crash Course
 
 **Duration:** ~45 minutes | **Level:** Complete beginner  
-**What you'll learn:** Create a repo, track changes with commits, and work with branches — the core Git workflow used by every developer.
+**What you'll learn:** Create a repo, track changes with commits, and work with branches — the core Git workflow used by every developer and researcher.
 
 ---
 
@@ -247,7 +247,27 @@ flowchart TD
 
 ---
 
-## 📋 Cheat Sheet
+## � Why Researchers Should Use Git
+
+Git was built by programmers, but its core idea — **tracking every change to a file over time** — is exactly what rigorous science demands.
+
+In a lab, your most valuable asset is not your equipment: it's your notes. A protocol tweaked on a Tuesday, a parameter adjusted mid-experiment, a hypothesis revised after peer review — these changes are easy to lose and hard to reconstruct. Git solves this.
+
+**With Git, your lab log becomes a living, versioned document:**
+
+- Every `git commit` is a timestamped entry: *what changed, when, and why* (via the commit message).
+- `git log` gives you a complete, tamper-evident audit trail of your work.
+- Branches let you explore a new methodology without overwriting your baseline protocol.
+- If an experiment goes wrong, `git checkout` takes you back to any previous state instantly.
+- Collaborators can work on the same document simultaneously without overwriting each other's contributions.
+
+Think of it as a **lab notebook that never loses a page**, can be shared with your entire team, and remembers every single version you've ever written — automatically.
+
+The workflow you just learned (`status → add → commit`) is all you need to start.
+
+---
+
+## �📋 Cheat Sheet
 
 | Command | What it does |
 |---|---|
